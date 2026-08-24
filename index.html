@@ -318,6 +318,7 @@ function catsWithProducts(){return CATS.filter(c=>c.id==='all'||PRODUCTS.some(p=
 function parseDL(str){const m=(str||'').match(/(\d+)\/(\d+)[^\d]*(\d+):(\d+)/);return m?new Date(2026,+m[1]-1,+m[2],+m[3],+m[4]):null;}
 const MOCK_NOW=new Date(2026,6,28,14,20); // デモ用の現在時刻（本番は new Date()）。通夜締切15:00の40分前＝1時間前督促が表示される想定。
 function urgencyMsg(cats){
+  return ''; // デモ版：締切直前の警告は表示しない
   const map={kuge:[FUNERAL.wakeDeadline,FUNERAL.funeralDeadline],kouden:[FUNERAL.koudenDeadline]};
   let dls=[];(cats||[]).forEach(c=>{if(map[c])dls=dls.concat(map[c]);});
   if(!dls.length)return ''; // 弔電など締切対象外カテゴリのみのときは警告を出さない
@@ -334,9 +335,7 @@ function dlRowsFor(cats){
     else rows+=`<div class="dl-row"><span class="t">${wd} まで</span><span>のご注文は、通夜にお届け可能です。</span></div>`
              +`<div class="dl-row"><span class="t">${fd} まで</span><span>のご注文は、告別式にお届け可能です。</span></div>`;
   }
-  if(cats.includes('kouden')){
-    rows+=`<div class="dl-row"><span class="t">${kd} まで</span><span>　香典のご注文を受け付けております。</span></div>`;
-  }
+  // デモ版：香典の締切行は表示しない
   return rows;
 }
 function dlCats(mode){
