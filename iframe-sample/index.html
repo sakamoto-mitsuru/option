@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お悔やみ情報 掲載サンプル｜サンプル葬祭（架空）</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2a2a28;
+    --sub: #6b665e;
+    --line: #e2ddd3;
+    --paper: #faf8f4;
+    --accent: #5b6b5a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Noto Sans JP", -apple-system, "Hiragino Sans", sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.8;
+  }
+  a { color: inherit; }
+
+  .sample-bar {
+    background: #3a3a38;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    padding: 8px 16px;
+  }
+
+  header.site {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+  }
+  .site-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .logo {
+    font-family: "Noto Serif JP", serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-decoration: none;
+  }
+  .logo small {
+    display: block;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--sub);
+    letter-spacing: .05em;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+  nav a { text-decoration: none; }
+  nav a[aria-current="page"] {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 4px;
+  }
+  .tel {
+    font-size: 13px;
+    color: var(--sub);
+    text-align: right;
+  }
+  .tel strong {
+    display: block;
+    font-size: 20px;
+    color: var(--ink);
+    letter-spacing: .04em;
+  }
+
+  .page-title {
+    background: linear-gradient(180deg, #ecebe5 0%, #f4f2ec 100%);
+    border-bottom: 1px solid var(--line);
+  }
+  .page-title .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 44px 24px 36px;
+  }
+  .page-title p.en {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: .2em;
+    color: var(--sub);
+  }
+  .page-title h1 {
+    margin: 4px 0 0;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: .08em;
+  }
+  .breadcrumb {
+    font-size: 12px;
+    color: var(--sub);
+    margin-top: 10px;
+  }
+
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 36px 24px 64px;
+  }
+  .lead {
+    margin: 0 0 28px;
+    font-size: 15px;
+  }
+
+  .obituary-frame {
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 8px;
+  }
+  .obituary-frame iframe {
+    display: block;
+  }
+
+  .explain {
+    margin-top: 48px;
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 24px 28px;
+  }
+  .explain h2 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-family: "Noto Serif JP", serif;
+  }
+  .explain p { margin: 0 0 12px; font-size: 14px; }
+  .explain pre {
+    margin: 0;
+    background: #2b2b29;
+    color: #f1efe9;
+    padding: 16px 18px;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+    border-radius: 4px;
+  }
+  .copy-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+  .copy-row button {
+    font: inherit;
+    font-size: 13px;
+    background: var(--accent);
+    color: #fff;
+    border: 0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  footer {
+    background: #3a3a38;
+    color: #d9d6cf;
+    font-size: 13px;
+  }
+  footer .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 28px 24px;
+  }
+
+  @media (max-width: 720px) {
+    .tel { display: none; }
+    nav ul { gap: 14px; font-size: 13px; }
+    .page-title h1 { font-size: 24px; }
+    main { padding: 24px 12px 48px; }
+    .obituary-frame { padding: 0; border: 0; }
+    .explain { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sample-bar">このページは、お悔やみ情報をホームページに埋め込んだときの見本です（葬儀社名・電話番号は架空のものです）</div>
+
+<header class="site">
+  <div class="site-inner">
+    <a class="logo" href="#">サンプル葬祭<small>家族葬・一般葬・社葬</small></a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">ご葬儀プラン</a></li>
+        <li><a href="#">式場のご案内</a></li>
+        <li><a href="#" aria-current="page">お悔やみ情報</a></li>
+        <li><a href="#">会社案内</a></li>
+      </ul>
+    </nav>
+    <div class="tel">24時間365日受付<strong>0120-000-000</strong></div>
+  </div>
+</header>
+
+<section class="page-title">
+  <div class="inner">
+    <p class="en">OBITUARY</p>
+    <h1>お悔やみ情報</h1>
+    <div class="breadcrumb">ホーム ＞ お悔やみ情報</div>
+  </div>
+</section>
+
+<main>
+  <p class="lead">当社でご葬儀をお手伝いさせていただいている方の訃報をお知らせいたします。ご供花・ご弔電のお申し込みも、こちらから承ります。</p>
+
+  <!-- ▼ ここからが埋め込み部分 ▼ -->
+  <div class="obituary-frame">
+    <iframe
+      src="https://biz.itowa71.com/cf0a882a-f72a-4a7b-acf3-ab1a7a6d2eb8/"
+      title="お悔やみ情報"
+      width="100%"
+      height="1200"
+      style="border:0; max-width:100%;"
+      loading="lazy">
+    </iframe>
+  </div>
+  <!-- ▲ ここまでが埋め込み部分 ▲ -->
+
+  <section class="explain">
+    <h2>このページで使っている埋め込み用コード</h2>
+    <p>ホームページの編集画面で、HTMLを貼り付けられる部品（「カスタムHTML」「埋め込み」など）に下のコードを貼り付けると、上と同じように表示されます。訃報の掲載内容は、itowaの管理画面で登録した情報が自動で反映されます。</p>
+<pre id="code">&lt;iframe
+  src="https://biz.itowa71.com/cf0a882a-f72a-4a7b-acf3-ab1a7a6d2eb8/"
+  title="お悔やみ情報"
+  width="100%"
+  height="1200"
+  style="border:0; max-width:100%;"
+  loading="lazy"&gt;
+&lt;/iframe&gt;</pre>
+    <div class="copy-row"><button type="button" id="copyBtn">コードをコピー</button></div>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">サンプル葬祭（架空）｜お悔やみ情報の表示：株式会社itowa</div>
+</footer>
+
+<script>
+  document.getElementById('copyBtn').addEventListener('click', async function () {
+    var text = document.getElementById('code').textContent;
+    var btn = this;
+    try {
+      await navigator.clipboard.writeText(text);
+      btn.textContent = 'コピーしました';
+    } catch (e) {
+      var range = document.createRange();
+      range.selectNodeContents(document.getElementById('code'));
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      btn.textContent = '選択しました（⌘C でコピー）';
+    }
+    setTimeout(function () { btn.textContent = 'コードをコピー'; }, 2500);
+  });
+</script>
+</body>
+</html>
